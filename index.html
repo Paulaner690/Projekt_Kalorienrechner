@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Kalorienrechner</title>
+</head>
+<body>
+    <article class="background">
+        <section class="content">
+        <h1>Kalorienrechner</h1>
+        <h5>Berechne deinen täglichen Grundumsatz und Gesamtenergiebedarf an Kalorien auf Basis der Harris-Benedict-Formel.</h5>
+        <form onsubmit=" kalorien(); return false">
+            <label for="grösse">Körpergröße in cm</label> 
+            <input type="text" id="groesse" placeholder="Körpergröße in cm">
+            <label for="alter">Alter in Jahren</label>
+            <input type="number" id="alter" placeholder="Alter in Jahren">
+            <label for="gewicht">Gewicht in kg</label>
+            <input type="number" id="gewicht" placeholder="Gewicht in kg">
+
+            <h4>Geschlecht</h4>
+            <div class="körperbau">
+                <div>
+                    <input type="radio" name="koerperbau" value="weiblich" checked>
+                    <label for="weiblich">Weiblich</label>
+                </div>
+                <div>
+                    <input type="radio" name="koerperbau" value="männlich">
+                    <label for="männlich">Männlich</label><br>
+                </div>
+            </div>
+            <label for="aktivität">Arbeits- und Freizeitsaktivität</label>
+            <select name="pal" id="pal">
+                <option value="0.95">Schlafen</option>
+                <option value="1.2">Nur Sitzen oder Liegen</option>
+                <option value="1.5"> Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der Freizeit, z.B. Büroarbeit</option>
+                <option value="1.7">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer</option>
+                <option value="1.9">Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker, Mechaniker, Hausfrauen</option>
+                <option value="2.2">Körperlich anstrengende berufliche Arbeit</option>
+            </select>
+            <input type="submit" value="Berechne meinen Kalorienbedarf">
+        </form>
+        
+        <section class="ergebnis">
+            <h4>Grundumsatz</h4>
+            <div class="ergebnis-output">
+                <p class="grundumsatzKcal">0 kcal</p>
+                <p class="grundumsatzKj">0 kJ</p>
+            </div>
+            <h4>Gesamtumsatz</h4>
+            <div class="ergebnis-output">
+                <p class="gesamtKcal">0 kcal</p>
+                <p class="gesamtKj">0 kJ</p>
+            </div>
+            <h5>Das Ergebnis des Rechners sollten Sie als Orientierungswert ansehen, da es verschiende Fehlermöglichkeiten gibt, wie abweichender Grundumsatz, falsche Zeiteinschätzung etc.</h5>
+        </section>
+        </section>
+    </article>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>
